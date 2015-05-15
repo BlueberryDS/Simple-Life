@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         widget.cpp \
-    gamehandle.cpp
+    gamehandle.cpp \
+    graphicssquare.cpp
 
 HEADERS  += widget.h \
-    gamehandle.h
+    gamehandle.h \
+    graphicssquare.h
 
 FORMS    += widget.ui

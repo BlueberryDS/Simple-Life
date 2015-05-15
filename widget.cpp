@@ -9,7 +9,7 @@ Widget::Widget(QWidget *parent) :
 }
 
 Widget::Widget(QGraphicsScene & scene):Widget(0){
-    resize(QSize(415, 420));
+    setFixedSize(QSize(415, 420));
     ui->graphicsView->setScene(&scene);
 }
 
