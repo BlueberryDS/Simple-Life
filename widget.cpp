@@ -3,14 +3,14 @@
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::Widget)
+    ui(new Ui::Widget),
+    game(scene)
 {
     ui->setupUi(this);
-}
-
-Widget::Widget(QGraphicsScene & scene):Widget(0){
+    ui ->graphicsView ->setScene(&scene);
     setFixedSize(QSize(415, 420));
-    ui->graphicsView->setScene(&scene);
+    connect((ui->nextButton), SIGNAL(clicked()), &game, SLOT(update()));
+    connect((ui->clearButton), SIGNAL(clicked()), &game, SLOT(clean()));
 }
 
 Widget::~Widget()

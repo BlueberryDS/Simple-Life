@@ -16,13 +16,15 @@ class GameHandle : public QObject
 
     QGraphicsScene & scene;
 
-    QVector<QVector <bool> > map1;
-    QVector<QVector <bool> > map2;
-
+    QVector<QVector <bool> > map;
     QVector<QVector <GraphicsSquare> > items;
 
 public:
     explicit GameHandle(QGraphicsScene & setScene, QObject *parent = 0);
+
+public slots:
+    void update();
+    void clean();
 };
 
 #endif // GAMEHANDLE_H

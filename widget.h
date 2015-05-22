@@ -1,6 +1,7 @@
 #ifndef WIDGET_H
 #define WIDGET_H
 
+#include "gamehandle.h"
 #include <QWidget>
 #include <QGraphicsScene>
 
@@ -12,9 +13,12 @@ class Widget : public QWidget
 {
     Q_OBJECT
 
+
+    QGraphicsScene scene;
+    GameHandle game;
+
 public:
     explicit Widget(QWidget *parent = 0);
-    Widget(QGraphicsScene &scene);
 
     ~Widget();
 

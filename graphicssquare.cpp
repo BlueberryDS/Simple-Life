@@ -33,6 +33,12 @@ void GraphicsSquare::paint(QPainter *painter, const QStyleOptionGraphicsItem *op
     if(state) painter->fillRect(fill, fillBrush);
 }
 
+void GraphicsSquare::setState(bool _state)
+{
+    state = _state;
+    update();
+}
+
 void GraphicsSquare::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     if(pressed)

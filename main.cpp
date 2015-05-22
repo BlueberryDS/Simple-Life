@@ -7,11 +7,10 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QGraphicsScene scene;
 
-    GameHandle game(scene);
+    Widget w;
 
-    Widget w(scene);
+
     w.show();
 
 

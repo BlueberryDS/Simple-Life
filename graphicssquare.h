@@ -7,9 +7,9 @@
 
 class GraphicsSquare : public QGraphicsItem
 {
-public:
     bool state;
     static bool pressed;
+public:
 
     GraphicsSquare();
 
@@ -20,6 +20,10 @@ public:
     void paint(QPainter * painter,
                    const QStyleOptionGraphicsItem * option,
                    QWidget * widget);
+
+    bool getState() {return state;}
+
+    void setState(bool _state);
 
 protected:
     virtual void mousePressEvent(QGraphicsSceneMouseEvent *event);
