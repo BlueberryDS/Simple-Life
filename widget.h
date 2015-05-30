@@ -4,6 +4,7 @@
 #include "gamehandle.h"
 #include <QWidget>
 #include <QGraphicsScene>
+#include <QTimer>
 
 namespace Ui {
 class Widget;
@@ -16,6 +17,8 @@ class Widget : public QWidget
 
     QGraphicsScene scene;
     GameHandle game;
+
+    QTimer frameTimer;
 
 public:
     explicit Widget(QWidget *parent = 0);
