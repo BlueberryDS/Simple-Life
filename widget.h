@@ -21,6 +21,9 @@ public:
     explicit Widget(QWidget *parent = 0);
 
     ~Widget();
+public slots:
+
+    void togglePause();
 
 private:
     Ui::Widget *ui;
